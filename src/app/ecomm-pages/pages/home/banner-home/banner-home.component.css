@@ -1,0 +1,31 @@
+.slide_head {
+    padding-bottom: 20px;
+}
+.slide_head h3{
+float: left;
+}
+.slide_head h5{
+float: right;
+border: 1px solid #000;
+padding: 3px;
+}
+
+.slide {
+    height:250px;
+    margin : 10px;
+    border-radius: 20px;
+    /* box-shadow: 0 2px 12px rgba(0,0,0,0.3); */
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgba(215, 233, 250, 0.753);
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.slide img{
+    height:180px;
+}
+
+.slide_all {
+    margin:20px 0;
+}

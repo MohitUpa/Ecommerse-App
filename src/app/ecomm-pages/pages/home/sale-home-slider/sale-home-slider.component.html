@@ -1,0 +1,16 @@
+
+    <div class="slider1">
+        <div class="mall-slide1">
+            <div class="slid-content1" style="text-align: center;">
+                <div class="mall-show-slide1" *ngFor="let item of Imagedata;">
+                    <img src="{{item}}">
+                </div>
+                <div class="mall-carousel-ind1">
+                    <ul>
+                        <li *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

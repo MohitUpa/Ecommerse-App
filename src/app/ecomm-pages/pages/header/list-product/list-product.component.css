@@ -1,0 +1,21 @@
+.list_product {
+    margin: 0 10%;
+    border-radius: 10px;
+    padding: 10px;
+    /* box-shadow: 0 2px 12px rgba(0,0,0, 0.3);background-color: rgba(215, 233, 250, 0.753); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.list_product .product {
+    text-align: center;
+    margin: 3px;
+    border-radius: 3px;
+    padding: 7px;
+    /* box-shadow: 0 2px 12px rgba(0,0,0, 0.3); */
+    background-color: rgba(215, 233, 250, 0.753);
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+   
+}

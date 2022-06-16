@@ -1,0 +1,80 @@
+<div class="slide_all">
+    <div class="slide_head">
+        <h3><b>Winter Cloaths</b></h3>
+        <h5>See All</h5>
+    </div>
+    <hr>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let slide of dynamicSlides">
+            <div class="slide">
+                <img src="{{slide.src}}" alt="img 1">
+                <p><b>Best Cloath</b><br>Exploare More</p>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+<div class="slide_all">
+    <div class="slide_head">
+        <h3><b>Top Deals on Fashion</b></h3>
+        <h5>See All</h5>
+    </div>
+    <hr>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let slide of fashions">
+            <div class="slide">
+                <img src="{{slide.src}}" alt="img 1">
+                <p><b>Best Deals</b><br>Exploare More</p>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+
+<app-sale-home-slider></app-sale-home-slider>
+
+<div class="slide_all">
+    <div class="slide_head">
+        <h3><b>Quality Assured Picks</b></h3>
+        <h5>See All</h5>
+    </div>
+    <hr>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let slide of qualities">
+            <div class="slide">
+                <img src="{{slide.src}}" alt="img 1">
+                <p><b>Best Quality</b><br>Exploare More</p>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+<div class="slide_all">
+    <div class="slide_head">
+        <h3><b>Best Selling Furniture</b></h3>
+        <h5>See All</h5>
+    </div>
+    <hr>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let slide of furniture">
+            <div class="slide">
+                <img src="{{slide.src}}" alt="img 1">
+                <p><b>Best Furniture</b><br>Exploare More</p>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+
+
+<div class="slide_all">
+    <div class="slide_head">
+        <h3><b>TVs & Appliances</b></h3>
+        <h5>See All</h5>
+    </div>
+    <hr>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let slide of appliances">
+            <div class="slide">
+                <img src="{{slide.src}}" alt="img 1">
+                <p><b>Best Appliances</b><br>Exploare More</p>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>

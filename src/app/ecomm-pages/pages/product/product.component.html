@@ -1,0 +1,51 @@
+<div class="product_all">
+    <div class="head">
+        <h1>Shop</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-color">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home / shop /<span
+                            style="border-bottom:2px solid grey;padding: 3px;">Shoes</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Default Shorting
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">By Price</a>
+                        <a class="dropdown-item" href="#">By Color</a>
+                        <a class="dropdown-item" href="#">By Brend</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="products" *ngFor="let data of shopData">
+        <div class="single_product" (click)="product($event)">
+            <div class="pop_up">
+                <div class="left_img">
+                    <img src="../../../../assets/images/pop.png" alt="pop-up">
+                </div>
+                <div class="right_img">
+                    <img src="../../../../assets/images/cart.svg" alt="add-to-cart">
+                </div>
+            </div>
+            <div class="product_img"  style="text-align: center;">
+                <img src="{{data.img}}" alt="shoe">
+            </div>
+            <hr>
+            <div class="price" style="text-align: center;">
+                <h5>{{data.name}}</h5>
+                <p>{{data.price}}</p>
+            </div>
+        </div>
+    </div>
+</div>

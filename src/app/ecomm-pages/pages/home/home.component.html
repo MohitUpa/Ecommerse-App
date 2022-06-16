@@ -1,0 +1,31 @@
+<div class="home_all">
+    <div class="slider">
+        <div class="mall-slide">
+            <div class="slid-content" style="text-align: center;">
+                <div class="mall-show-slide" *ngFor="let item of Imagedata;">
+                    <img src="{{item}}">
+                </div>
+                <div class="mall-carousel-ind">
+                    <ul>
+                        <li *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="head">
+    <h1><b>Home</b></h1>
+</div>
+<div class="head1">
+    <img src="../../../../assets/images/head_img.png" alt="">
+</div>
+<div class="head2">
+    <img src="../../../../assets/images/head_img.png" alt="">
+</div>
+<div class="setup">
+    <app-banner-home></app-banner-home>
+    <app-footer-info-home></app-footer-info-home>
+</div>
+

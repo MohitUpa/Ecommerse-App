@@ -1,0 +1,17 @@
+<div class="pages">
+    <app-header (toShop)="totoggle($event)" (toHome)="totoggle($event)"></app-header>
+
+    <div *ngIf="home">
+        <app-home></app-home>
+    </div>
+   
+    <div *ngIf="products">
+        <app-product (routeProduct)="totoggle($event)"></app-product>
+    </div>
+
+    <div *ngIf="product">
+        <app-single-product></app-single-product>
+    </div>
+
+    <app-footer></app-footer>
+</div>

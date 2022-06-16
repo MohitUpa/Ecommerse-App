@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-list-product',
@@ -7,61 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListProductComponent implements OnInit {
 
-  constructor() { }
+  @Output() toProduct = new EventEmitter<any>();
+
+  toggleProduct = false;
+  productData:any;
+  productData1 = [];
+  productCatName:any;
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.productData = this.productService.getProductData();
+    const key = 'category';
+    const arrayUniqueByKey = [...new Map(this.productData.map((item: { [x: string]: any; }) =>
+      [item[key], item])).values()];
+    this.productCatName = arrayUniqueByKey;
   }
-  products = [
-    {
-      id: 1,
-      cat_name: "electronics",
-      sub_cat_name: [
-        {
-          name: "Watch"
-        },
-        {
-          name: "Watching Machine"
-        },
-        {
-          name: "Mixture"
-        },
-        {
-          name: "TV"
-        }, {
-          name: "Trimmer"
-        }
-      ]
-    },
-    {
-      id: 2,
-      cat_name: "furniture",
-      sub_cat_name: [
-        {
-          name: "Sofa",
-        },
-        {
-          name: "Chairs"
-        },
-        {
-          name: "Cabinate"
-        }
-      ]
-    }, 
-    {
-      id: 3,
-      cat_name: "cloths",
-      sub_cat_name: [
-        {
-          name: "Winter Cloth"
-        },
-        {
-          name: "Mens Cloth"
-        },
-        {
-          name: "Women Cloth"
-        }, {
-          name: "Children Cloth"
-        }
-      ]
-    }]
+
+  showProduct(values: any) {
+    console.log(values);
+    this.toggleProduct = true;
+    this.productData1 = this.productData.filter((item: { category: any; }) => item.category === values);
+    console.log(this.productData1);
+    this.toProduct.emit({home:false,product:false,products:false});
+  }
+
+  toggle() {
+    this.toggleProduct = false;
+  }
 }

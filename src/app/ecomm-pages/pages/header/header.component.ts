@@ -8,6 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() toShop = new EventEmitter<any>();
+  @Output() toProduct = new EventEmitter<any>();
 
   constructor() { }
 
@@ -18,5 +19,9 @@ export class HeaderComponent implements OnInit {
   }
   toShoppage(value:any) {
     this.toShop.emit({home:false,product:false,products:true});
+  }
+
+  toProductPage(val:any) {
+    this.toProduct.emit(val);
   }
 }
